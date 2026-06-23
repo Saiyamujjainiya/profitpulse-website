@@ -1,31 +1,356 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ProfitPulse - Meesho Profit Analytics</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfitPulse | Know Your Real Meesho Profit</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glow-effect {
+            box-shadow: 0 0 40px -10px rgba(99, 102, 241, 0.15);
+        }
+    </style>
 </head>
-<body>
-<header><div class="container"><h1>ProfitPulse</h1></div></header>
-<section class="hero">
-<div class="container">
-<h2>Know Your Real Meesho Profit. Not Just Sales.</h2>
-<p>Track SKU-wise profitability, settlement reconciliation, GST impact, return losses and actual earnings automatically.</p>
-<a class="btn" href="#">Start Free Trial</a>
-</div>
-</section>
-<section class="features">
-<div class="container">
-<h2>Features</h2>
-<div class="grid">
-<div class="card">Settlement Reconciliation</div>
-<div class="card">SKU Wise Profit Analysis</div>
-<div class="card">GST Impact Calculator</div>
-<div class="card">Return & RTO Analysis</div>
-</div>
-</div>
-</section>
-<footer><div class="container">© 2026 ProfitPulse</div></footer>
+<body class="bg-[#0B0F19] text-gray-200 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0B0F19]/80 border-b border-gray-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="h-10 w-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-600/30">
+                    <i class="fa-solid fa-chart-line-up text-lg"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-white">Profit<span class="text-indigo-400">Pulse</span></span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+                <a href="#features" class="hover:text-white transition">Features</a>
+                <a href="#how-it-works" class="hover:text-white transition">How It Works</a>
+                <a href="#pricing" class="hover:text-white transition">Pricing</a>
+                <a href="#faq" class="hover:text-white transition">FAQ</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="hidden sm:inline-flex text-sm font-medium text-gray-300 hover:text-white transition">Sign In</a>
+                <a href="#pricing" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-xl text-white bg-indigo-600 hover:bg-indigo-500 shadow-md shadow-indigo-600/20 transition-all transform hover:-translate-y-0.5">Start Free Trial</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] bg-indigo-600/10 blur-[140px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-medium mb-6">
+                <span class="flex h-2 w-2 rounded-full bg-indigo-400 animate-pulse"></span> Built Exclusively for Meesho Sellers
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-6 leading-[1.15]">
+                Know Your Real Meesho Profit.<br><span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">Not Just Sales.</span>
+            </h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Stop guessing your margins. ProfitPulse tracks SKU-wise returns, processes exact settlement reconciliations, computes actual GST impacts, and stops hidden leakage automatically.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                <a href="#pricing" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold rounded-xl text-white bg-indigo-600 hover:bg-indigo-500 shadow-lg shadow-indigo-600/20 transition transform hover:-translate-y-0.5">
+                    Connect Your Panel Now
+                </a>
+                <a href="#how-it-works" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold rounded-xl text-gray-300 bg-gray-800/80 hover:bg-gray-800 border border-gray-700/60 transition">
+                    <i class="fa-solid fa-play mr-2 text-xs text-indigo-400"></i> See How It Works
+                </a>
+            </div>
+
+            <div class="relative rounded-2xl border border-gray-800 bg-[#111625] p-4 sm:p-6 glow-effect max-w-4xl mx-auto">
+                <div class="flex items-center justify-between border-b border-gray-800 pb-4 mb-6">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-red-500/40"></span>
+                        <span class="w-3 h-3 rounded-full bg-yellow-500/40"></span>
+                        <span class="w-3 h-3 rounded-full bg-green-500/40"></span>
+                        <span class="text-xs text-gray-500 ml-2 font-mono">dashboard.profitpulse.in</span>
+                    </div>
+                    <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2.5 py-0.5 rounded-md font-medium">Live Panel Synced</span>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+                    <div class="bg-[#161C2E] p-4 rounded-xl border border-gray-800">
+                        <span class="text-xs text-gray-400 block mb-1">Gross Sales Orders</span>
+                        <span class="text-xl font-bold text-white">₹4,28,500</span>
+                    </div>
+                    <div class="bg-[#161C2E] p-4 rounded-xl border border-gray-800">
+                        <span class="text-xs text-gray-400 block mb-1">Return Loss (RTO + Customer)</span>
+                        <span class="text-xl font-bold text-red-400">₹1,12,400</span>
+                    </div>
+                    <div class="bg-[#161C2E] p-4 rounded-xl border border-gray-800">
+                        <span class="text-xs text-gray-400 block mb-1">Net Payout Received</span>
+                        <span class="text-xl font-bold text-indigo-400">₹2,84,100</span>
+                    </div>
+                    <div class="bg-[#161C2E] p-4 rounded-xl border border-gray-800 highlight-green">
+                        <span class="text-xs text-gray-400 block mb-1">Real Net Profit</span>
+                        <span class="text-xl font-bold text-emerald-400">₹74,250 <span class="text-xs text-emerald-500">(17.3%)</span></span>
+                    </div>
+                </div>
+
+                <div class="mt-4 bg-[#161C2E] rounded-xl border border-gray-800 p-6 h-48 flex flex-col justify-between">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-semibold text-gray-400">SKU-Wise Net Profit Margin Tracking</span>
+                        <div class="flex gap-2 text-[10px]">
+                            <span class="flex items-center gap-1 text-gray-400"><span class="w-2 h-2 rounded bg-indigo-500"></span>Payout</span>
+                            <span class="flex items-center gap-1 text-gray-400"><span class="w-2 h-2 rounded bg-red-400"></span>Return Cost</span>
+                        </div>
+                    </div>
+                    <div class="flex items-end justify-between gap-2 h-28 pt-4">
+                        <div class="w-full bg-gray-800 rounded-t h-[40%] relative"><div class="absolute bottom-0 w-full bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t h-[75%]"></div><div class="absolute top-0 w-full bg-red-400/40 rounded-t h-[25%]"></div></div>
+                        <div class="w-full bg-gray-800 rounded-t h-[75%] relative"><div class="absolute bottom-0 w-full bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t h-[80%]"></div><div class="absolute top-0 w-full bg-red-400/40 rounded-t h-[20%]"></div></div>
+                        <div class="w-full bg-gray-800 rounded-t h-[60%] relative"><div class="absolute bottom-0 w-full bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t h-[65%]"></div><div class="absolute top-0 w-full bg-red-400/40 rounded-t h-[35%]"></div></div>
+                        <div class="w-full bg-gray-800 rounded-t h-[90%] relative"><div class="absolute bottom-0 w-full bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t h-[85%]"></div><div class="absolute top-0 w-full bg-red-400/40 rounded-t h-[15%]"></div></div>
+                        <div class="w-full bg-gray-800 rounded-t h-[50%] relative"><div class="absolute bottom-0 w-full bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t h-[70%]"></div><div class="absolute top-0 w-full bg-red-400/40 rounded-t h-[30%]"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr id="features" class="border-gray-900 my-0">
+
+    <section class="py-20 bg-[#090D14]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Engineered to Handle the Chaos of Meesho Orders</h2>
+                <p class="text-gray-400">Stop downloading broken Excel sheets daily. Get centralized, calculated metrics automatically updated directly from your platform API patterns.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[#111625] p-8 rounded-2xl border border-gray-800/80 hover:border-indigo-500/30 transition group">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-boxes-stacked text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">SKU-Wise Real Margin</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Instantly matches individual production/sourcing costs with final payouts to flag which catalog entries are actually bleeding cash.</p>
+                </div>
+                <div class="bg-[#111625] p-8 rounded-2xl border border-gray-800/80 hover:border-indigo-500/30 transition group">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-rotate-left text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Return Loss Deductor</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Calculates the true weight of Customer Returns and RTO shipping penalties. Isolates return impacts separate from standard logistics fees.</p>
+                </div>
+                <div class="bg-[#111625] p-8 rounded-2xl border border-gray-800/80 hover:border-indigo-500/30 transition group">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-receipt text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Settlement Reconciliation</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Automatically tallies expected values against what Meesho actually credits your bank accounts to flag missing payouts or incorrect penalties.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-20 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Set Up in Less Than 3 Minutes</h2>
+                <p class="text-gray-400">No developer help required. Follow these three simple steps to unlock absolute visibility.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <div class="text-center px-4">
+                    <div class="w-10 h-10 rounded-full bg-indigo-600/20 border border-indigo-500/40 text-indigo-400 flex items-center justify-center font-bold text-sm mx-auto mb-4">1</div>
+                    <h4 class="text-base font-bold text-white mb-2">Create Account</h4>
+                    <p class="text-xs text-gray-400">Sign up using your business email and choose your operational volume tier.</p>
+                </div>
+                <div class="text-center px-4">
+                    <div class="w-10 h-10 rounded-full bg-indigo-600/20 border border-indigo-500/40 text-indigo-400 flex items-center justify-center font-bold text-sm mx-auto mb-4">2</div>
+                    <h4 class="text-base font-bold text-white mb-2">Input Sourcing Prices</h4>
+                    <p class="text-xs text-gray-400">Drop in your raw production or purchasing costs per catalog SKU via simple sheet uploads.</p>
+                </div>
+                <div class="text-center px-4">
+                    <div class="w-10 h-10 rounded-full bg-indigo-600/20 border border-indigo-500/40 text-indigo-400 flex items-center justify-center font-bold text-sm mx-auto mb-4">3</div>
+                    <h4 class="text-base font-bold text-white mb-2">Analyze Pulse</h4>
+                    <p class="text-xs text-gray-400">Our systems break down deductions, returns, and GST impacts cleanly onto one screen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-20 bg-[#090D14]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Transparent Pricing for Growing Brands</h2>
+                <p class="text-gray-400">Select the plan that fits your average daily shipping metrics.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-[#111625] p-8 rounded-2xl border border-gray-800 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-2">Lite</span>
+                        <div class="flex items-baseline gap-1 text-white mb-4">
+                            <span class="text-3xl font-extrabold">₹1,499</span>
+                            <span class="text-xs text-gray-400">/ month</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mb-6">Perfect for new sellers getting their footing on the platform.</p>
+                        <hr class="border-gray-800 mb-6">
+                        <ul class="space-y-3 text-xs text-gray-300">
+                            <li><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Up to 100 Orders / day</li>
+                            <li><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Core SKU Margin Tracking</li>
+                            <li><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Weekly Reconciliation Updates</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="mt-8 w-full py-2.5 text-xs font-semibold text-center rounded-xl bg-gray-800 text-white hover:bg-gray-700 transition block">Start Free Trial</a>
+                </div>
+
+                <div class="bg-[#111625] p-8 rounded-2xl border-2 border-indigo-500 relative flex flex-col justify-between shadow-2xl shadow-indigo-500/10">
+                    <span class="absolute top-0 right-6 -translate-y-1/2 bg-indigo-600 text-white text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full">Most Popular</span>
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-indigo-400 block mb-2">Growth Professional</span>
+                        <div class="flex items-baseline gap-1 text-white mb-4">
+                            <span class="text-4xl font-extrabold">₹3,499</span>
+                            <span class="text-xs text-gray-400">/ month</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mb-6">Engineered for high-volume daily dispatch workflows.</p>
+                        <hr class="border-gray-800 mb-6">
+                        <ul class="space-y-3 text-xs text-gray-300">
+                            <li><i class="fa-solid fa-check text-indigo-400 mr-2"></i> **400 to 1,000+ Orders / day**</li>
+                            <li><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Advanced Return Loss Deductor</li>
+                            <li><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Instant Settlement Reconciliation</li>
+                            <li><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Automated GST Impact Summary</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="mt-8 w-full py-2.5 text-xs font-semibold text-center rounded-xl bg-indigo-600 text-white hover:bg-indigo-500 shadow-md shadow-indigo-600/20 transition block">Get Started Now</a>
+                </div>
+
+                <div class="bg-[#111625] p-8 rounded-2xl border border-gray-800 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-2">Enterprise</span>
+                        <div class="flex items-baseline gap-1 text-white mb-4">
+                            <span class="text-3xl font-extrabold">Custom</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mb-6">For large multi-warehouse operations and manufacturers.</p>
+                        <hr class="border-gray-800 mb-6">
+                        <ul class="space-y-3 text-xs text-gray-300">
+                            <li><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Unlimited Daily Shipments</li>
+                            <li><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Multi-Account Management</li>
+                            <li><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Dedicated Strategy Manager</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="mt-8 w-full py-2.5 text-xs font-semibold text-center rounded-xl bg-gray-800 text-white hover:bg-gray-700 transition block">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Trusted by High-Volume Manufacturers</h2>
+                <p class="text-gray-400">See how top-tier platform operators eliminate error leaks from their processing columns.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-[#111625] p-6 rounded-2xl border border-gray-800">
+                    <p class="text-sm text-gray-300 italic mb-6">"Before using ProfitPulse, we thought our best-selling fashion tool catalog was highly profitable. This panel isolated the RTO return penalties and proved we were actually losing money on that SKU. Saved our entire monthly bottom line."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="h-10 w-10 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400 font-bold text-sm">V</div>
+                        <div>
+                            <h5 class="text-sm font-bold text-white">Business Owner</h5>
+                            <span class="text-[11px] text-gray-500">Apparel & Tools Manufacturer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#111625] p-6 rounded-2xl border border-gray-800">
+                    <p class="text-sm text-gray-300 italic mb-6">"Reconciling hundreds of daily dispatches across fragmented sheets used to take hours of manual workbook filtering. Now the metrics parse seamlessly. It provides exact numbers ready to handle."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="h-10 w-10 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400 font-bold text-sm">M</div>
+                        <div>
+                            <h5 class="text-sm font-bold text-white">Logistics Director</h5>
+                            <span class="text-[11px] text-gray-500">E-commerce Hub Manager</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 bg-[#090D14]">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-400">Everything you need to know about managing your payout tracking safely.</p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="bg-[#111625] border border-gray-800 rounded-xl p-5 group list-none" open>
+                    <summary class="flex items-center justify-between font-semibold text-white cursor-pointer select-none">
+                        <span>Is my Meesho data completely secure?</span>
+                        <span class="text-xs text-gray-400 group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-xs text-gray-400 mt-3 leading-relaxed">
+                        Yes. ProfitPulse relies completely on secure cloud infrastructure patterns. We store data with advanced encryption profiles and never share or expose catalog pricing variables to external vendors.
+                    </p>
+                </details>
+
+                <details class="bg-[#111625] border border-gray-800 rounded-xl p-5 group list-none">
+                    <summary class="flex items-center justify-between font-semibold text-white cursor-pointer select-none">
+                        <span>How does it calculate Customer Return losses accurately?</span>
+                        <span class="text-xs text-gray-400 group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-xs text-gray-400 mt-3 leading-relaxed">
+                        We break down forward logistics penalties against return shipping costs automatically collected from your statement logs. This isolates pure manufacturing cost write-offs from simple shipping processing adjustments.
+                    </p>
+                </details>
+
+                <details class="bg-[#111625] border border-gray-800 rounded-xl p-5 group list-none">
+                    <summary class="flex items-center justify-between font-semibold text-white cursor-pointer select-none">
+                        <span>Can I upload custom sourcing costs for multiple SKUs?</span>
+                        <span class="text-xs text-gray-400 group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-xs text-gray-400 mt-3 leading-relaxed">
+                        Absolutely. You can update your operational product margins directly using a single-click CSV or Excel spreadsheet export. Your dashboard handles the cross-referencing calculations internally.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 relative">
+        <div class="max-w-md mx-auto px-4 sm:px-6 relative z-10">
+            <div class="bg-[#111625] border border-gray-800 rounded-2xl p-8 glow-effect">
+                <h3 class="text-xl font-bold text-white mb-2 text-center">Get Early Premium Access</h3>
+                <p class="text-xs text-gray-400 text-center mb-6">Our next onboarding batch opens soon. Secure your position.</p>
+                
+                <form onsubmit="event.preventDefault(); alert('Registration submitted! Our integration specialist will reach out shortly.');" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-medium text-gray-400 mb-1.5">Full Name</label>
+                        <input type="text" required class="w-full bg-[#161C2E] border border-gray-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 transition" placeholder="Syam Sharma">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-400 mb-1.5">WhatsApp Number</label>
+                        <input type="tel" required class="w-full bg-[#161C2E] border border-gray-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 transition" placeholder="+91 98765 43210">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-400 mb-1.5">Average Daily Orders</label>
+                        <select class="w-full bg-[#161C2E] border border-gray-800 rounded-xl px-4 py-2.5 text-sm text-gray-300 focus:outline-none focus:border-indigo-500 transition">
+                            <option>Less than 100 orders/day</option>
+                            <option>100 to 400 orders/day</option>
+                            <option selected>400 to 1,000 orders/day</option>
+                            <option>More than 1,000 orders/day</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full py-3 px-4 text-sm font-semibold rounded-xl text-white bg-indigo-600 hover:bg-indigo-500 shadow-md shadow-indigo-600/20 transition-all font-medium mt-2">
+                        Request Invite Verification
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-gray-900 bg-[#090D14] py-8 text-center text-xs text-gray-500">
+        <p>© 2026 ProfitPulse Inc. All rights reserved. Not affiliated directly with Meesho platform services.</p>
+    </footer>
+
+    <a href="https://wa.me/919876543210?text=I'm%20interested%20in%20setting%20up%20ProfitPulse%20analytics" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-50 h-14 w-14 bg-emerald-500 text-white rounded-full flex items-center justify-center text-2xl shadow-xl shadow-emerald-500/20 hover:bg-emerald-400 hover:scale-110 transition-all duration-300"
+       title="Chat via WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
 </body>
 </html>
