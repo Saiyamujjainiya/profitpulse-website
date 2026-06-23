@@ -10,41 +10,7 @@
         .premium-shadow {
             box-shadow: 0 12px 40px -20px rgba(159, 33, 108, 0.08);
         }
-        /* Fixed Pixel Stretch Layout Error for Google Translate Widget */
-        #google_translate_element {
-            display: inline-block;
-            min-width: 140px;
-            max-width: 160px;
-            height: 32px;
-            overflow: hidden;
-            vertical-align: middle;
-        }
-        #google_translate_element select {
-            background-color: #F3E8FF;
-            color: #9F216C;
-            font-size: 12px;
-            font-weight: bold;
-            padding: 4px 8px;
-            border-radius: 6px;
-            border: 1px solid #E9D5FF;
-            width: 100%;
-            height: 100%;
-            outline: none;
-            cursor: pointer;
-        }
-        .goog-te-banner-frame.skiptranslate { display: none !important; }
-        body { top: 0px !important; }
     </style>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'en,hi,ta,te,gu,mr,bn,kn,ml',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body class="bg-[#F8FAFC] text-[#2D3748] font-sans antialiased selection:bg-[#9F216C] selection:text-white">
 
@@ -65,20 +31,16 @@
                 </div>
             </div>
             
-            <nav class="hidden lg:flex items-center gap-6 text-xs font-bold tracking-wide text-gray-500 uppercase">
+            <nav class="hidden md:flex items-center gap-8 text-xs font-bold tracking-wide text-gray-500 uppercase">
                 <a href="#how-it-works" class="hover:text-[#9F216C] transition">Easy Steps</a>
                 <a href="#upload-center" class="hover:text-[#9F216C] transition">Upload Modules</a>
                 <a href="#app-mockup" class="hover:text-[#9F216C] transition">Interactive Dashboard</a>
                 <a href="#pricing" class="hover:text-[#9F216C] transition">Pricing Plans</a>
             </nav>
 
-            <div class="flex items-center gap-4">
-                <div class="flex items-center h-8">
-                    <div id="google_translate_element"></div>
-                </div>
-                
+            <div class="flex items-center gap-3">
                 <a href="YOUR_EXE_LINK_HERE" class="inline-flex items-center justify-center px-4 py-2 text-xs font-bold rounded-lg text-white bg-[#9F216C] hover:bg-[#851B5A] shadow-sm transition-all whitespace-nowrap">
-                    <i class="fa-brands fa-windows mr-1.5 text-sm"></i> Download App
+                    <i class="fa-brands fa-windows mr-1.5 text-sm"></i> Download Desktop App
                 </a>
             </div>
         </div>
@@ -88,7 +50,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 border border-purple-100 text-[#5E2B8D] text-xs font-bold mb-6">
-                <i class="fa-solid fa-circle-check text-emerald-600"></i> Local SQLite Engine • Safe Offline Operation Protection
+                <i class="fa-solid fa-circle-check text-emerald-600"></i> Local SQLite Engine • Smart Label Crop & Error Protection Suite
             </div>
             
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-4 max-w-4xl mx-auto leading-tight">
@@ -208,7 +170,6 @@
                                 <td class="p-4 font-sans text-[11px] leading-relaxed">
                                     <div class="flex justify-between"><span>Delivered:</span><span class="font-bold font-mono">1236</span></div>
                                     <div class="flex justify-between text-gray-400"><span>In Transit:</span><span class="font-mono">3</span></div>
-                                    <div class="flex justify-between text-gray-400"><span>Cancelled:</span><span class="font-mono">217</span></div>
                                     <div class="flex justify-between text-red-500 font-semibold"><span>RTO / Ret:</span><span class="font-bold font-mono">317</span></div>
                                 </td>
                                 <td class="p-4">
@@ -368,7 +329,7 @@
                         <h3 class="text-lg font-black text-gray-900 mb-4">500+ Above Daily Orders</h3>
                         
                         <div class="space-y-1 mb-6">
-                            <div class="text-2xl font-black text-gray-950">₹1,199 <span class="text-xs text-gray-400 font-normal">/ month</span> <span class="text-xs line-through text-gray-400 font-normal">₹1,999</span></div>
+                            <div class="text-2xl font-black text-gray-950">₹1,999 <span class="text-xs text-gray-400 font-normal">/ month</span></div>
                             <div class="text-xs font-semibold text-gray-500">
                                 Annual: <span class="line-through text-red-400">₹23,988</span> <span class="text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded ml-1">₹19,999 / year</span>
                             </div>
