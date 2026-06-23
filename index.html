@@ -10,9 +10,33 @@
         .premium-shadow {
             box-shadow: 0 12px 40px -20px rgba(159, 33, 108, 0.08);
         }
+        /* Custom styling to keep the Google translate widget clean and minimalist */
+        #google_translate_element select {
+            background-color: #F3E8FF;
+            color: #9F216C;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 1px solid #E9D5FF;
+            outline: none;
+            cursor: pointer;
+        }
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
     </style>
+    <script type="text/javascript font-sans">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi,ta,te,gu,mr,bn,kn,ml', // English, Hindi, Tamil, Telugu, Gujarati, Marathi, Bengali, Kannada, Malayalam
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
-<body class="bg-[#F8FAFC] text-[#2D3748] font-sans antialiased selection:bg-[#9F216C] selection:text-white">
+<body class="bg-[#F8FAFC] text-[#2D3748] font-sans antialiased selection:bg-[#9F216C] selection:text-white font-sans">
 
     <div class="bg-gradient-to-r from-[#9F216C] via-[#7B247C] to-[#5E2B8D] text-white text-center py-2 px-4 text-xs font-bold tracking-wide flex items-center justify-center gap-2 shadow-xs">
         <span class="bg-white/20 px-2 py-0.5 rounded text-[10px] uppercase font-black tracking-wider">v36 Live</span>
@@ -31,7 +55,7 @@
                 </div>
             </div>
             
-            <nav class="hidden md:flex items-center gap-8 text-xs font-bold tracking-wide text-gray-500 uppercase">
+            <nav class="hidden lg:flex items-center gap-6 text-xs font-bold tracking-wide text-gray-500 uppercase">
                 <a href="#how-it-works" class="hover:text-[#9F216C] transition">Easy Steps</a>
                 <a href="#upload-center" class="hover:text-[#9F216C] transition">Upload Modules</a>
                 <a href="#app-mockup" class="hover:text-[#9F216C] transition">Interactive Dashboard</a>
@@ -39,8 +63,10 @@
             </nav>
 
             <div class="flex items-center gap-3">
+                <div id="google_translate_element" class="mr-1"></div>
+                
                 <a href="YOUR_EXE_LINK_HERE" class="inline-flex items-center justify-center px-4 py-2 text-xs font-bold rounded-lg text-white bg-[#9F216C] hover:bg-[#851B5A] shadow-sm transition-all">
-                    <i class="fa-brands fa-windows mr-1.5 text-sm"></i> Download Desktop App
+                    <i class="fa-brands fa-windows mr-1.5 text-sm"></i> Download App
                 </a>
             </div>
         </div>
@@ -54,8 +80,8 @@
             </div>
             
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-4 max-w-4xl mx-auto leading-tight">
-                Sales Stream Toh Lakhon Ki Hai, <br class="hidden sm:inline">
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#9F216C] via-purple-700 to-indigo-600">Par Kis SKU Aur Catalog Me Real Profit Bach Rha Hai?</span>
+                Sales Ka Turnover Toh Sirf Ek Number Hai... <br class="hidden sm:inline">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#9F216C] via-purple-700 to-indigo-600">RTO Shipping Fee Aur Hidden Deductions Ke Baad Pata Hai Pocket Me Kya Bach Rha?</span>
             </h1>
             
             <p class="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto mb-8 font-medium leading-relaxed">
@@ -71,7 +97,7 @@
                 </a>
             </div>
 
-            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 text-left">
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 text-left font-sans">
                 <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-2xs">
                     <div class="w-9 h-9 rounded bg-purple-50 text-[#9F216C] flex items-center justify-center mb-3"><i class="fa-solid fa-font text-base"></i></div>
                     <h4 class="text-sm font-bold text-gray-950 mb-1">Big Font SKU Printing</h4>
@@ -89,7 +115,7 @@
                 </div>
             </div>
 
-            <div id="upload-center" class="max-w-5xl mx-auto text-left mb-16">
+            <div id="upload-center" class="max-w-5xl mx-auto text-left mb-16 font-sans">
                 <div class="border-l-4 border-[#9F216C] pl-3 mb-6">
                     <h3 class="text-xs font-black text-gray-900 uppercase tracking-wider">Integrated File Upload Center</h3>
                     <p class="text-[11px] text-gray-500 font-medium">Drop system export spreadsheets seamlessly onto your offline window panel logs.</p>
@@ -178,7 +204,7 @@
                                         <div>
                                             <span class="text-xs font-bold text-gray-950 block leading-tight">Attractive Sewing Sets & Kits</span>
                                             <span class="text-[10px] text-gray-400 block mt-0.5">Catalog ID: 217943488</span>
-                                            <span class="text-[9px] text-[#5E2B8D] font-bold block mt-0.5 bg-purple-50 px-1 py-0.2 rounded w-fit">Office Supplies & Stationery</span>
+                                            <span class="text-[9px] text-[#5E2B8D] font-bold block mt-0.5 bg-purple-50 px-1 py-0.2 rounded w-fit font-sans">Office Supplies & Stationery</span>
                                         </div>
                                     </div>
                                 </td>
@@ -210,7 +236,7 @@
                                         <div>
                                             <span class="text-xs font-bold text-gray-950 block leading-tight">Exclusive Art & Craft Painting Kits</span>
                                             <span class="text-[10px] text-gray-400 block mt-0.5">Catalog ID: 147018163</span>
-                                            <span class="text-[9px] text-[#5E2B8D] font-bold block mt-0.5 bg-purple-50 px-1 py-0.2 rounded w-fit">Office Supplies & Stationery</span>
+                                            <span class="text-[9px] text-[#5E2B8D] font-bold block mt-0.5 bg-purple-50 px-1 py-0.2 rounded w-fit font-sans">Office Supplies & Stationery</span>
                                         </div>
                                     </div>
                                 </td>
@@ -240,7 +266,7 @@
         </div>
     </section>
 
-    <section id="pricing" class="py-16 bg-white border-t border-gray-100">
+    <section id="pricing" class="py-16 bg-white border-t border-gray-100 font-sans">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-14">
                 <span class="text-xs font-bold uppercase tracking-wider text-[#9F216C] bg-purple-50 px-3 py-1 rounded">7 Days Free Trial On All Plans</span>
