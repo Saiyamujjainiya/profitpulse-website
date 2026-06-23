@@ -1,377 +1,296 @@
-import { useState } from "react";
-import {
-  Activity,
-  ArrowRight,
-  Calculator,
-  CheckCircle2,
-  Menu,
-  RotateCcw,
-  Sparkles,
-  X,
-  Zap,
-  Box,
-  Layout,
-  Layers,
-  ArrowDownUp,
-  Wallet,
-  Boxes,
-  Warehouse,
-  FileText,
-  Coins,
-  ChevronDown
-} from "lucide-react";
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfitPulse Windows App | Deep Profit Analytics & Label Automation</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .premium-shadow {
+            box-shadow: 0 12px 40px -20px rgba(159, 33, 108, 0.08);
+        }
+        .continuous-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+        .continuous-scroll::-webkit-scrollbar-thumb {
+            background-color: #E2E8F0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-[#F8FAFC] text-[#2D3748] font-sans antialiased selection:bg-[#9F216C] selection:text-white">
 
-export default function LandingPage() {
-  const [open, setOpen] = useState(false);
-  const [activeFaq, setActiveFaq] = useState<number | null>(null);
-
-  const links = [
-    { href: "#features", label: "Core Features" },
-    { href: "#upload-center", label: "Upload Modules" },
-    { href: "#app-mockup", label: "Interactive Dashboard" },
-    { href: "#pricing", label: "Pricing Plans" },
-  ];
-
-  return (
-    <div className="min-h-screen bg-[#F8FAFC] text-[#2D3748] font-sans antialiased selection:bg-[#9F216C] selection:text-white">
-      
-      {/* Notice Banner */}
-      <div className="bg-gradient-to-r from-[#9F216C] via-[#7B247C] to-[#5E2B8D] text-white text-center py-2 px-4 text-xs font-bold tracking-wide flex items-center justify-center gap-2">
-        <span className="bg-white/20 px-2 py-0.5 rounded text-[10px] uppercase font-black tracking-wider">v36 Live</span>
+    <div class="bg-gradient-to-r from-[#9F216C] via-[#7B247C] to-[#5E2B8D] text-white text-center py-2 px-4 text-xs font-bold tracking-wide flex items-center justify-center gap-2 shadow-xs">
+        <span class="bg-white/20 px-2 py-0.5 rounded text-[10px] uppercase font-black tracking-wider">v36 Live</span>
         <span>ProfitPulse Windows Local App architecture is fully optimized for nationwide e-commerce supplier panels.</span>
-      </div>
-
-      {/* Navbar Container Layer */}
-      <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xs">
-        <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-brand shadow-glow">
-              <Activity className="h-5 w-5 text-white" strokeWidth={2.5} />
-            </span>
-            <div>
-              <span className="text-base font-black text-gray-900 tracking-tight block">Profit<span className="text-[#9F216C]">Pulse</span></span>
-              <span className="text-[9px] text-gray-400 block -mt-1 font-bold tracking-wider uppercase">Local SQLite Application</span>
-            </div>
-          </div>
-          
-          <div className="hidden md:flex items-center gap-8">
-            {links.map((l) => (
-              <a key={l.href} href={l.href} className="text-xs font-bold uppercase tracking-wider text-gray-500 hover:text-gray-900 transition-colors">
-                {l.label}
-              </a>
-            ))}
-          </div>
-
-          <div className="hidden md:flex items-center">
-            <a href="YOUR_EXE_LINK_HERE" className="inline-flex items-center justify-center px-4 py-2 text-xs font-bold rounded-lg text-white bg-[#9F216C] hover:bg-[#851B5A] shadow-sm transition-all whitespace-nowrap">
-              Download Desktop App
-            </a>
-          </div>
-
-          <button className="md:hidden rounded-lg p-2 hover:bg-gray-100" onClick={() => setOpen(!open)}>
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
-        </div>
-        
-        {open && (
-          <div className="md:hidden bg-white border-b border-gray-100 p-4 space-y-2">
-            {links.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-950 rounded-md">
-                {l.label}
-              </a>
-            ))}
-          </div>
-        )}
-      </header>
-
-      {/* Hero Section Copy */}
-      <section className="pt-12 pb-14 bg-gradient-to-b from-purple-50/50 via-white to-[#F8FAFC]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-bold text-[#9F216C]">
-            <Sparkles className="h-3.5 w-3.5" /> Smart Label Crop & Error Protection Suite
-          </span>
-          <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight max-w-4xl mx-auto leading-tight">
-            High Sales Volume is Just a Number... <br className="hidden sm:inline" />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#9F216C] via-purple-700 to-indigo-600">Do You Know Your Real Take-Home Payout After Hidden RTO Penalties, Ads & Packaging Wastage?</span>
-          </h1>
-          <p className="mt-6 max-w-xl mx-auto text-sm sm:text-base text-gray-500 font-medium leading-relaxed">
-            Track precise product sourcing valuations, isolate packaging tier leakage, format bulk labels with giant clear fonts, and calculate clean piece-wise margins locally.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
-            <a href="YOUR_EXE_LINK_HERE" className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-bold text-white bg-gray-900 hover:bg-gray-800 transition shadow-sm">
-              Start 7-Day Free Trial
-            </a>
-            <a href="YOUR_YOUTUBE_LINK_HERE" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-bold text-white bg-[#FF0000] hover:bg-[#D90000] transition shadow-xs">
-              Watch App Demo Setup
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* CORE WORKFLOW HIGHLIGHT TILES */}
-      <section id="features" className="py-12 bg-white">
-        <div className="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-2xs">
-            <Box className="h-6 w-6 text-[#9F216C] mb-3" />
-            <h4 class="text-xs font-bold text-gray-950 mb-1">Packaging Cost Audit</h4>
-            <p className="text-[11px] text-gray-500 leading-relaxed">Polybag, corrugated box, tape aur label printing costs ke saath damaged return packaging wastage ko automatic tracking system me jodta hai.</p>
-          </div>
-          <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-2xs">
-            <Layout className="h-6 w-6 text-[#9F216C] mb-3" />
-            <h4 class="text-xs font-bold text-gray-950 mb-1">Zero Packing Errors</h4>
-            <p className="text-[11px] text-gray-500 leading-relaxed">Enlarges product SKU designators on physical output slips to stop incorrect product configuration dispatches during rush hours.</p>
-          </div>
-          <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-2xs">
-            <Layers className="h-6 w-6 text-[#9F216C] mb-3" />
-            <h4 class="text-xs font-bold text-gray-950 mb-1">RTO & Return Drops</h4>
-            <p className="text-[11px] text-gray-500 leading-relaxed">Multi-quantity orders are cleanly separated onto isolated print streams to prevent workers from missing multi-item components.</p>
-          </div>
-          <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-2xs">
-            <ArrowDownUp className="h-6 w-6 text-[#9F216C] mb-3" />
-            <h4 class="text-xs font-bold text-gray-950 mb-1">Max Staff Productivity</h4>
-            <p className="text-[11px] text-gray-500 leading-relaxed">Takes heavy, unorganized multi-page downloaded panel order sheet PDFs and re-orders them into rapid, courier-split optimized print layouts.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* UPLOAD CENTER SNAPSHOT GRID */}
-      <section id="upload-center" className="py-12 bg-white border-t border-gray-100">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="border-l-4 border-[#9F216C] pl-3 mb-6">
-            <h3 class="text-xs font-black text-gray-900 uppercase tracking-wider">Integrated File Upload Center</h3>
-            <p className="text-[11px] text-gray-500 font-medium">Drop system export spreadsheets seamlessly onto your offline window panel logs.</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <div className="bg-white p-4 rounded-lg border border-gray-200 shadow-2xs flex gap-3 items-center">
-              <Wallet className="h-5 w-5 text-[#5E2B8D]" />
-              <h4 class="text-xs font-bold text-gray-900">Payment / Settlement</h4>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-gray-200 shadow-2xs flex gap-3 items-center">
-              <Boxes className="h-5 w-5 text-[#5E2B8D]" />
-              <h4 class="text-xs font-bold text-gray-900">Orders / Manifest Details</h4>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-gray-200 shadow-2xs flex gap-3 items-center">
-              <Warehouse className="h-5 w-5 text-[#5E2B8D]" />
-              <h4 class="text-xs font-bold text-gray-900">Inventory Status</h4>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-gray-200 shadow-2xs flex gap-3 items-center">
-              <FileText className="h-5 w-5 text-[#5E2B8D]" />
-              <h4 class="text-xs font-bold text-gray-900">Returns / RTO Log</h4>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* INTERACTIVE DATA LEDGER DISPLAY PANEL */}
-      <section id="app-mockup" className="py-12 bg-gray-50/50 border-t border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="bg-white rounded-xl border border-gray-200 shadow-md premium-shadow overflow-hidden">
-            <div className="bg-gray-50 border-b border-gray-200 px-4 py-3 flex items-center justify-between">
-              <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-red-400"></span>
-                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                <span className="text-xs font-bold text-gray-600 font-mono ml-1">ProfitPulse App v36 — Catalog Analytics Manager</span>
-              </div>
-              <span className="text-[10px] bg-purple-50 text-[#9F216C] font-bold px-2.5 py-0.5 rounded font-mono border border-purple-100">Firm: CYLONE & SONS</span>
-            </div>
-
-            <div className="p-4 bg-white border-b border-gray-100">
-              <h3 className="text-base font-black text-gray-900 tracking-tight">Catalog Details View</h3>
-              <p className="text-[11px] text-gray-400 font-medium">Lookup catalog trends dynamically. Real visual thumb cards monitor performance margins accurately.</p>
-            </div>
-
-            <div className="overflow-x-auto w-full continuous-scroll">
-              <table className="w-full text-left border-collapse font-mono text-xs text-gray-700">
-                <thead>
-                  <tr className="bg-gray-50 border-b border-gray-200 text-gray-500 font-bold uppercase tracking-wider text-[10px] font-sans">
-                    <th className="p-4 min-w-[280px]">Catalog Details</th>
-                    <th className="p-4 min-w-[140px]">Order Details</th>
-                    <th className="p-4 min-w-[110px]">Order Value</th>
-                    <th className="p-4 min-w-[110px]">Order Payout</th>
-                    <th className="p-4 min-w-[120px]">Return Shipping</th>
-                    <th className="p-4 min-w-[150px]">Packaging Cost/Waste</th>
-                    <th className="p-4 min-w-[110px]">Ads Cost + GST</th>
-                    <th className="p-4 min-w-[160px]">Final Payout / Per-Piece</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-100 bg-white font-medium">
-                  
-                  {/* Row 1: Clothing */}
-                  <tr className="hover:bg-purple-50/10 transition">
-                    <td className="p-4 font-sans">
-                      <div className="flex items-center gap-3">
-                        <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=80&h=80&q=80" alt="Clothing" className="w-12 h-12 rounded object-cover border border-gray-200 flex-shrink-0" />
-                        <div>
-                          <span className="text-xs font-bold text-gray-950 block leading-tight">Rayon Flared Ethnic Kurti Combo</span>
-                          <span className="text-[10px] text-gray-400 block mt-0.5">Catalog ID: 217943488</span>
-                          <span className="text-[9px] text-[#9F216C] font-bold block mt-0.5 bg-purple-50 px-1.5 py-0.2 rounded w-fit">Category: Clothing</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td className="p-4 font-sans text-[11px] leading-relaxed">
-                      <div className="flex justify-between"><span>Delivered:</span><span className="font-bold">1236</span></div>
-                      <div className="flex justify-between text-red-500 font-semibold"><span>RTO / Ret:</span><span class="font-bold">317</span></div>
-                    </td>
-                    <td className="p-4">₹2,34,870</td>
-                    <td className="p-4 text-blue-600 font-bold">₹2,35,440</td>
-                    <td className="p-4 text-red-500 font-semibold">-₹4,093</td>
-                    <td className="p-4">
-                      <span class="text-gray-900 font-bold">-₹12,424</span>
-                      <span class="block text-[9px] text-amber-600 font-semibold font-sans">Incl. RTO Waste</span>
-                    </td>
-                    <td className="p-4 text-muted-foreground">-₹874</td>
-                    <td className="p-4 font-sans">
-                      <span className="text-emerald-600 font-black text-sm block">₹2,15,909</span>
-                      <span className="inline-block text-[10px] bg-emerald-50 text-emerald-700 font-bold px-1.5 py-0.5 rounded mt-1"><Coins className="h-3 w-3 inline mr-1" /> ₹42 / pc profit</span>
-                    </td>
-                  </tr>
-
-                  {/* Row 2: Shoes */}
-                  <tr className="hover:bg-purple-50/10 transition">
-                    <td className="p-4 font-sans">
-                      <div className="flex items-center gap-3">
-                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=80&h=80&q=80" alt="Shoes" className="w-12 h-12 rounded object-cover border border-gray-200 flex-shrink-0" />
-                        <div>
-                          <span className="text-xs font-bold text-gray-950 block leading-tight">Lightweight Casual Sports Sneakers</span>
-                          <span className="text-[10px] text-gray-400 block mt-0.5">Catalog ID: 147018163</span>
-                          <span className="text-[9px] text-blue-700 font-bold block mt-0.5 bg-blue-50 px-1.5 py-0.2 rounded w-fit">Category: Footwear</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td className="p-4 font-sans text-[11px] leading-relaxed">
-                      <div className="flex justify-between"><span>Delivered:</span><span class="font-bold">1424</span></div>
-                      <div className="flex justify-between text-red-500 font-semibold"><span>RTO / Ret:</span><span class="font-bold">119</span></div>
-                    </td>
-                    <td className="p-4">₹91,533</td>
-                    <td className="p-4 text-blue-600 font-bold">₹91,601</td>
-                    <td className="p-4 text-red-500 font-semibold">-₹11,921</td>
-                    <td className="p-4">
-                      <span class="text-gray-900 font-bold">-₹21,630</span>
-                      <span class="block text-[9px] text-amber-600 font-semibold font-sans">Box + Wrap Tier</span>
-                    </td>
-                    <td className="p-4 text-muted-foreground">-₹250</td>
-                    <td className="p-4 font-sans">
-                      <span className="text-emerald-600 font-black text-sm block">₹56,911</span>
-                      <span className="inline-block text-[10px] bg-emerald-50 text-emerald-700 font-bold px-1.5 py-0.5 rounded mt-1">₹11 / pc profit</span>
-                    </td>
-                  </tr>
-
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* THREE TIER STRATEGIC PRICING SECTION */}
-      <section id="pricing" className="py-16 bg-white font-sans">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#9F216C] bg-purple-50 px-3 py-1 rounded">7 Days Free Trial On All Plans</span>
-            <h2 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mt-3">Simple Operational Pricing</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
-            
-            {/* Plan 1 */}
-            <div className="bg-white p-6 rounded-xl border border-purple-200 flex flex-col justify-between shadow-2xs bg-gradient-to-b from-purple-50/20 to-white">
-              <div>
-                <div className="flex justify-between items-start mb-2">
-                  <span className="text-[10px] font-bold text-[#9F216C] uppercase tracking-wider block">Starter Entry Hook</span>
-                  <span className="text-[9px] bg-emerald-100 text-emerald-700 font-extrabold px-2 py-0.5 rounded">7 Days Free</span>
-                </div>
-                <h3 className="text-lg font-black text-gray-900 mb-4">0 to 100 Daily Orders</h3>
-                <div class="space-y-1 mb-6">
-                  <div className="text-2xl font-black text-gray-950">₹399 <span className="text-xs text-gray-400 font-normal">/ month</span> <span className="text-xs line-through text-gray-400">₹499</span></div>
-                  <div className="text-xs font-semibold text-gray-500">Annual: <span className="text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded">₹3,999 / year</span></div>
-                </div>
-                <hr className="border-gray-100 mb-4" />
-                <ul className="space-y-2.5 text-xs text-gray-600 font-semibold">
-                  <li><i className="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Daily PDF Label Crop & Grouping</li>
-                  <li><i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Big Font SKU Packing Code Labels</li>
-                  <li><i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Multi-Quantity Orders Batch Print</li>
-                </ul>
-              </div>
-              <button className="w-full text-center py-2.5 rounded-lg font-bold bg-[#9F216C] text-white text-xs mt-8 transition">Start Free Trial</button>
-            </div>
-
-            {/* Plan 2 */}
-            <div className="bg-white p-6 rounded-xl border border-gray-200 flex flex-col justify-between shadow-2xs">
-              <div>
-                <div className="flex justify-between items-start mb-2">
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider block">Growth Hub Tier</span>
-                  <span className="text-[9px] bg-emerald-100 text-emerald-700 font-extrabold px-2 py-0.5 rounded">7 Days Free</span>
-                </div>
-                <h3 className="text-lg font-black text-gray-900 mb-4">101 to 500 Daily Orders</h3>
-                <div class="space-y-1 mb-6">
-                  <div className="text-2xl font-black text-gray-950">₹1,299 <span class="text-xs text-gray-400 font-normal">/ month</span></div>
-                  <div className="text-xs font-semibold text-gray-500">Annual: <span class="text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded">₹12,999 / year</span></div>
-                </div>
-                <hr className="border-gray-100 mb-4" />
-                <ul className="space-y-2.5 text-xs text-gray-600 font-semibold">
-                  <li><i className="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Everything inside Starter Tier</li>
-                  <li><i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Advanced Packing Material Log Setup</li>
-                  <li><i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Returns Shipping Fee Deductor</li>
-                </ul>
-              </div>
-              <button className="w-full text-center py-2.5 rounded-lg font-bold bg-gray-100 hover:bg-gray-200 text-gray-900 text-xs mt-8 transition">Start Free Trial</button>
-            </div>
-
-            {/* Plan 3 */}
-            <div className="bg-white p-6 rounded-xl border border-gray-200 flex flex-col justify-between shadow-2xs">
-              <div>
-                <div className="flex justify-between items-start mb-2">
-                  <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider block">Scale Professional</span>
-                  <span class="text-[9px] bg-emerald-100 text-emerald-700 font-extrabold px-2 py-0.5 rounded">7 Days Free</span>
-                </div>
-                <h3 className="text-lg font-black text-gray-900 mb-4">500+ Above Daily Orders</h3>
-                <div class="space-y-1 mb-6">
-                  <div className="text-2xl font-black text-gray-950">₹1,999 <span class="text-xs text-gray-400 font-normal">/ month</span></div>
-                  <div className="text-xs font-semibold text-gray-500">Annual: <span class="text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded">₹19,999 / year</span></div>
-                </div>
-                <hr className="border-gray-100 mb-4" />
-                <ul class="space-y-2.5 text-xs text-gray-600 font-semibold">
-                  <li><i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Unlimited High-Volume Calculations</li>
-                  <li><i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Integrated Packaging Material Waste Audit</li>
-                  <li><i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Regional State Revenue Heatmaps</li>
-                </ul>
-              </div>
-              <button className="w-full text-center py-2.5 rounded-lg font-bold bg-gray-100 hover:bg-gray-200 text-gray-900 text-xs mt-8 transition">Start Free Trial</button>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ INTERACTIVE ACCORDION ROW */}
-      <section id="faq" className="py-16 bg-gray-50/30 border-t border-gray-100">
-        <div className="mx-auto max-w-4xl px-4">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-black tracking-tight">Questions, Answered</h2>
-          </div>
-          <div className="space-y-3">
-            {[
-              { q: "Does ProfitPulse operate offline?", a: "Yes. ProfitPulse runs as a local offline Windows client. All parsing actions, spreadsheet audits, and database logs compute within an internal secure SQLite instance on your PC." },
-              { q: "How does it track packaging material wastage?", a: "Suppliers input custom unit prices for items like polybags, tape, sheets, or tags in the Purchase Master. The system cross-references manifest logs to log spent packaging indexes on cancellations and return flows." }
-            ].map((f, idx) => (
-              <div key={idx} className="rounded-2xl border border-gray-200 bg-white px-5 py-3">
-                <button className="flex w-full items-center justify-between py-3 font-bold text-left text-sm sm:text-base text-gray-950" onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}>
-                  <span>{f.q}</span>
-                  <ChevronDown className={`h-4 w-4 text-gray-400 transition-transform ${activeFaq === idx ? "transform rotate-180" : ""}`} />
-                </button>
-                {activeFaq === idx && <p className="pb-3 text-xs sm:text-sm text-gray-500 font-medium leading-relaxed">{f.a}</p>}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Footer Disclaimer */}
-      <footer className="bg-white border-t border-gray-100 py-6 text-center text-[11px] text-gray-400 font-medium">
-        <p>© 2026 Cylone and Sons. ProfitPulse is a decentralized data analysis desktop utility and maintains no official platform affiliation with any marketplace entities.</p>
-      </footer>
-
     </div>
-  );
-}
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="h-9 w-9 bg-gradient-to-br from-[#9F216C] to-[#5E2B8D] rounded-lg flex items-center justify-center text-white font-black text-sm shadow-sm">
+                    PP
+                </div>
+                <div>
+                    <span class="text-base font-black text-gray-900 tracking-tight">Profit<span class="text-[#9F216C]">Pulse</span></span>
+                    <span class="block text-[9px] text-[#5E2B8D] font-black tracking-wider -mt-1">LOCAL SQLITE APPLICATION</span>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 text-xs font-bold tracking-wide text-gray-500 uppercase">
+                <a href="#features" class="hover:text-[#9F216C] transition">Core Features</a>
+                <a href="#upload-center" class="hover:text-[#9F216C] transition">Upload Modules</a>
+                <a href="#app-mockup" class="hover:text-[#9F216C] transition">Interactive Dashboard</a>
+                <a href="#pricing" class="hover:text-[#9F216C] transition">Pricing Plans</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="YOUR_EXE_LINK_HERE" class="inline-flex items-center justify-center px-4 py-2 text-xs font-bold rounded-lg text-white bg-[#9F216C] hover:bg-[#851B5A] shadow-sm transition-all whitespace-nowrap">
+                    <i class="fa-brands fa-windows mr-1.5 text-sm"></i> Download Desktop App
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-12 pb-14 bg-gradient-to-b from-purple-50/50 via-white to-[#F8FAFC]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 border border-purple-100 text-[#5E2B8D] text-xs font-bold mb-6">
+                <i class="fa-solid fa-circle-check text-emerald-600"></i> Local SQLite Engine • Smart Label Crop & Error Protection Suite
+            </div>
+            
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-4 max-w-4xl mx-auto leading-tight">
+                High Sales Volume is Just a Number... <br class="hidden sm:inline">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#9F216C] via-purple-700 to-indigo-600">Do You Know Your Real Take-Home Payout After Hidden RTO Penalties, Ads & Packaging Wastage?</span>
+            </h1>
+            
+            <p class="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto mb-8 font-medium leading-relaxed">
+                Track precise product sourcing valuations, isolate packaging tier leakage, format bulk labels with giant clear fonts, and calculate clean piece-wise margins locally.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto mb-14">
+                <a href="YOUR_EXE_LINK_HERE" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-bold text-white bg-gray-900 hover:bg-gray-800 transition shadow-sm">
+                    <i class="fa-brands fa-windows"></i> Start 7-Day Free Trial
+                </a>
+                <a href="YOUR_YOUTUBE_LINK_HERE" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-bold text-white bg-[#FF0000] hover:bg-[#D90000] transition shadow-xs">
+                    <i class="fa-brands fa-youtube text-base"></i> Watch App Demo Setup
+                </a>
+            </div>
+
+            <div id="features" class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 mb-16 text-left">
+                <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-2xs">
+                    <div class="w-8 h-8 rounded bg-purple-50 text-[#9F216C] flex items-center justify-center mb-3"><i class="fa-solid fa-box-open text-sm"></i></div>
+                    <h4 class="text-xs font-bold text-gray-950 mb-1">Packaging Cost Audit</h4>
+                    <p class="text-[11px] text-gray-500 leading-relaxed">Polybag, corrugated box, tape aur label printing costs ke saath damaged return packaging wastage ko automatic tracking system me jodta hai.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-2xs">
+                    <div class="w-8 h-8 rounded bg-purple-50 text-[#9F216C] flex items-center justify-center mb-3"><i class="fa-solid fa-square-minus text-sm"></i></div>
+                    <h4 class="text-xs font-bold text-gray-950 mb-1">Zero Packing Errors</h4>
+                    <p class="text-[11px] text-gray-500 leading-relaxed">Enlarges product SKU designators on physical output slips to stop incorrect product configuration dispatches during rush hours.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-2xs">
+                    <div class="w-8 h-8 rounded bg-purple-50 text-[#9F216C] flex items-center justify-center mb-3"><i class="fa-solid fa-shield-virus text-sm"></i></div>
+                    <h4 class="text-xs font-bold text-gray-950 mb-1">RTO & Return Drops</h4>
+                    <p class="text-[11px] text-gray-500 leading-relaxed">Multi-quantity orders are cleanly separated onto isolated print streams to prevent workers from missing multi-item components.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-2xs">
+                    <div class="w-8 h-8 rounded bg-purple-50 text-[#9F216C] flex items-center justify-center mb-3"><i class="fa-solid fa-arrow-down-up-lock text-sm"></i></div>
+                    <h4 class="text-xs font-bold text-gray-950 mb-1">Max Staff Productivity</h4>
+                    <p class="text-[11px] text-gray-500 leading-relaxed">Takes heavy, unorganized multi-page downloaded panel order sheet PDFs and re-orders them into rapid, courier-split optimized print layouts.</p>
+                </div>
+            </div>
+
+            <div id="upload-center" class="max-w-5xl mx-auto text-left mb-16">
+                <div class="border-l-4 border-[#9F216C] pl-3 mb-6">
+                    <h3 class="text-xs font-black text-gray-900 uppercase tracking-wider">Integrated File Upload Center</h3>
+                    <p class="text-[11px] text-gray-500 font-medium">Drop system export spreadsheets seamlessly onto your offline window panel logs.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-2xs flex gap-3 items-center">
+                        <i class="fa-solid fa-wallet text-[#5E2B8D]"></i>
+                        <h4 class="text-xs font-bold text-gray-900">Payment / Settlement</h4>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-2xs flex gap-3 items-center">
+                        <i class="fa-solid fa-boxes-packing text-[#5E2B8D]"></i>
+                        <h4 class="text-xs font-bold text-gray-900">Orders / Manifest Details</h4>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-2xs flex gap-3 items-center">
+                        <i class="fa-solid fa-warehouse text-[#5E2B8D]"></i>
+                        <h4 class="text-xs font-bold text-gray-900">Inventory Status</h4>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-2xs flex gap-3 items-center">
+                        <i class="fa-solid fa-file-invoice text-[#5E2B8D]"></i>
+                        <h4 class="text-xs font-bold text-gray-900">Returns / RTO Log</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div id="app-mockup" class="bg-white rounded-xl border border-gray-200 shadow-md premium-shadow overflow-hidden max-w-5xl mx-auto text-left mb-16">
+                <div class="bg-gray-50 border-b border-gray-200 px-4 py-3 flex items-center justify-between">
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-red-400"></span>
+                        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                        <span class="text-xs font-bold text-gray-600 font-mono ml-1">ProfitPulse App v36 — Catalog Analytics Manager</span>
+                    </div>
+                    <span class="text-[10px] bg-purple-50 text-[#9F216C] font-bold px-2.5 py-0.5 rounded font-mono border border-purple-100">Firm: CYLONE & SONS</span>
+                </div>
+
+                <div class="p-4 bg-white border-b border-gray-100">
+                    <h3 class="text-base font-black text-gray-900 tracking-tight">Catalog Details View</h3>
+                    <p class="text-[11px] text-gray-400 font-medium">Lookup catalog trends dynamically. Real visual thumb cards monitor performance margins accurately.</p>
+                </div>
+
+                <div class="overflow-x-auto w-full continuous-scroll">
+                    <table class="w-full text-left border-collapse font-mono text-xs text-gray-700">
+                        <thead>
+                            <tr class="bg-gray-50 border-b border-gray-200 text-gray-500 font-bold uppercase tracking-wider text-[10px] font-sans">
+                                <th class="p-4 min-w-[280px]">Catalog Details</th>
+                                <th class="p-4 min-w-[140px]">Order Details</th>
+                                <th class="p-4 min-w-[110px]">Order Value</th>
+                                <th class="p-4 min-w-[110px]">Order Payout</th>
+                                <th class="p-4 min-w-[120px]">Return Shipping</th>
+                                <th class="p-4 min-w-[150px]">Packaging Cost/Waste</th>
+                                <th class="p-4 min-w-[110px]">Ads Cost + GST</th>
+                                <th class="p-4 min-w-[160px]">Final Payout / Per-Piece</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 bg-white font-medium">
+                            <tr class="hover:bg-purple-50/10 transition">
+                                <td class="p-4 font-sans">
+                                    <div class="flex items-center gap-3">
+                                        <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=80&h=80&q=80" alt="Clothing" class="w-12 h-12 rounded object-cover border border-gray-200 flex-shrink-0">
+                                        <div>
+                                            <span class="text-xs font-bold text-gray-950 block leading-tight">Rayon Flared Ethnic Kurti Combo</span>
+                                            <span class="text-[10px] text-gray-400 block mt-0.5">Catalog ID: 217943488</span>
+                                            <span class="text-[9px] text-[#9F216C] font-bold block mt-0.5 bg-purple-50 px-1.5 py-0.2 rounded w-fit font-sans">Category: Clothing</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="p-4 font-sans text-[11px] leading-relaxed">
+                                    <div class="flex justify-between"><span>Delivered:</span><span class="font-bold font-mono">1236</span></div>
+                                    <div class="flex justify-between text-red-500 font-semibold"><span>RTO / Ret:</span><span class="font-bold font-mono">317</span></div>
+                                </td>
+                                <td class="p-4"><span class="text-gray-900 font-bold">₹2,34,870</span></td>
+                                <td class="p-4 text-blue-600 font-bold">₹2,35,440</td>
+                                <td class="p-4 text-red-500 font-semibold">-₹4,093</td>
+                                <td class="p-4">
+                                    <span class="text-gray-900 font-bold font-mono">-₹12,424</span>
+                                    <span class="block text-[9px] text-amber-600 font-semibold font-sans">Incl. RTO Waste</span>
+                                </td>
+                                <td class="p-4 text-muted-foreground">-₹874</td>
+                                <td class="p-4 font-sans">
+                                    <span class="text-emerald-600 font-black font-mono text-sm block">₹2,15,909</span>
+                                    <span class="inline-block text-[10px] bg-emerald-50 text-emerald-700 font-bold px-1.5 py-0.5 rounded mt-1 font-mono">₹42 / pc profit</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-purple-50/10 transition">
+                                <td class="p-4 font-sans">
+                                    <div class="flex items-center gap-3">
+                                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=80&h=80&q=80" alt="Shoes" class="w-12 h-12 rounded object-cover border border-gray-200 flex-shrink-0">
+                                        <div>
+                                            <span class="text-xs font-bold text-gray-950 block leading-tight">Lightweight Casual Sports Sneakers</span>
+                                            <span class="text-[10px] text-gray-400 block mt-0.5">Catalog ID: 147018163</span>
+                                            <span class="text-[9px] text-blue-700 font-bold block mt-0.5 bg-blue-50 px-1.5 py-0.2 rounded w-fit font-sans">Category: Footwear</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="p-4 font-sans text-[11px] leading-relaxed">
+                                    <div class="flex justify-between"><span>Delivered:</span><span class="font-bold font-mono">1424</span></div>
+                                    <div class="flex justify-between text-red-500 font-semibold"><span>RTO / Ret:</span><span class="font-bold font-mono">119</span></div>
+                                </td>
+                                <td class="p-4"><span class="text-gray-900 font-bold">₹91,533</span></td>
+                                <td class="p-4 text-blue-600 font-bold">₹91,601</td>
+                                <td class="p-4 text-red-500 font-semibold">-₹11,921</td>
+                                <td class="p-4">
+                                    <span class="text-gray-900 font-bold font-mono">-₹21,630</span>
+                                    <span class="block text-[9px] text-amber-600 font-semibold font-sans">Box + Wrap Tier</span>
+                                </td>
+                                <td class="p-4 text-muted-foreground">-₹250</td>
+                                <td class="p-4 font-sans">
+                                    <span class="text-emerald-600 font-black font-mono text-sm block">₹56,911</span>
+                                    <span class="inline-block text-[10px] bg-emerald-50 text-emerald-700 font-bold px-1.5 py-0.5 rounded mt-1 font-mono">₹11 / pc profit</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-16 bg-white border-t border-gray-100 font-sans">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#9F216C] bg-purple-50 px-3 py-1 rounded">7 Days Free Trial On All Plans</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mt-3">Simple Operational Pricing</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+                <div class="bg-white p-6 rounded-xl border border-purple-200 flex flex-col justify-between shadow-2xs bg-gradient-to-b from-purple-50/20 to-white">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-[10px] font-bold text-[#9F216C] uppercase tracking-wider block">Starter Entry Hook</span>
+                            <span class="text-[9px] bg-emerald-100 text-emerald-700 font-extrabold px-2 py-0.5 rounded uppercase tracking-wide">7 Days Free</span>
+                        </div>
+                        <h3 class="text-lg font-black text-gray-900 mb-4">0 to 100 Daily Orders</h3>
+                        <div class="space-y-1 mb-6">
+                            <div class="text-2xl font-black text-gray-950">₹399 <span class="text-xs text-gray-400 font-normal">/ month</span></div>
+                            <div class="text-xs font-semibold text-gray-500">Annual: <span class="text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded">₹3,999 / year</span></div>
+                        </div>
+                        <hr class="border-gray-100 mb-4">
+                        <ul class="space-y-2.5 text-xs text-gray-600 font-semibold">
+                            <li><i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Daily PDF Label Crop & Grouping</li>
+                            <li><i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Big Font SKU Packing Code Labels</li>
+                        </ul>
+                    </div>
+                    <a href="YOUR_EXE_LINK_HERE" class="w-full text-center py-2.5 rounded-lg font-bold bg-[#9F216C] text-white text-xs mt-8 transition shadow-sm">Start Free Trial</a>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 flex flex-col justify-between shadow-2xs">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider block">Growth Hub Tier</span>
+                            <span class="text-[9px] bg-emerald-100 text-emerald-700 font-extrabold px-2 py-0.5 rounded uppercase tracking-wide">7 Days Free</span>
+                        </div>
+                        <h3 class="text-lg font-black text-gray-900 mb-4">101 to 500 Daily Orders</h3>
+                        <div class="space-y-1 mb-6">
+                            <div class="text-2xl font-black text-gray-950">₹1,299 <span class="text-xs text-gray-400 font-normal">/ month</span></div>
+                            <div class="text-xs font-semibold text-gray-500">Annual: <span class="text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded">₹12,999 / year</span></div>
+                        </div>
+                        <hr class="border-gray-100 mb-4">
+                        <ul class="space-y-2.5 text-xs text-gray-600 font-semibold">
+                            <li><i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Everything inside Starter Tier</li>
+                            <li><i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Advanced Packing Material Log Setup</li>
+                        </ul>
+                    </div>
+                    <a href="YOUR_EXE_LINK_HERE" class="w-full text-center py-2.5 rounded-lg font-bold bg-gray-100 hover:bg-gray-200 text-gray-900 text-xs mt-8 transition">Start Free Trial</a>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 flex flex-col justify-between shadow-2xs">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider block">Scale Professional</span>
+                            <span class="text-[9px] bg-emerald-100 text-emerald-700 font-extrabold px-2 py-0.5 rounded uppercase tracking-wide">7 Days Free</span>
+                        </div>
+                        <h3 class="text-lg font-black text-gray-900 mb-4">500+ Above Daily Orders</h3>
+                        <div class="space-y-1 mb-6">
+                            <div class="text-2xl font-black text-gray-950">₹1,999 <span class="text-xs text-gray-400 font-normal">/ month</span></div>
+                            <div class="text-xs font-semibold text-gray-500">Annual: <span class="text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded">₹19,999 / year</span></div>
+                        </div>
+                        <hr class="border-gray-100 mb-4">
+                        <ul class="space-y-2.5 text-xs text-gray-600 font-semibold">
+                            <li><i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Unlimited High-Volume Calculations</li>
+                            <li><i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> Integrated Packaging Material Waste Audit</li>
+                        </ul>
+                    </div>
+                    <a href="YOUR_EXE_LINK_HERE" class="w-full text-center py-2.5 rounded-lg font-bold bg-gray-100 hover:bg-gray-200 text-gray-900 text-xs mt-8 transition">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#F8FAFC] border-t border-gray-200 py-6 text-center text-[11px] text-gray-400 font-medium">
+        <p>© 2026 Cylone and Sons. ProfitPulse is a decentralized data analysis desktop utility and maintains no official platform affiliation with any marketplace entities.</p>
+    </footer>
+
+</body>
+</html>
